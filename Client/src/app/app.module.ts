@@ -3,21 +3,16 @@ import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {ProduitComponent} from './produit/produit.component';
-import {ProduitService} from './produit/produit.service';
-import {ContentComponent} from './content/content.component';
-import {NavbarComponent} from './navbar/navbar.component';
-import {SidebarComponent} from './sidebar/sidebar.component';
+
 import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { OffreComponent } from './offre/offre.component';
+import {Offreservice} from './services/offreservice';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProduitComponent,
-    ContentComponent,
-    NavbarComponent,
-    SidebarComponent
+    OffreComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +22,7 @@ import {HttpClientModule} from '@angular/common/http';
     HttpClientModule
 
   ],
-  providers: [ProduitService],
+  providers: [Offreservice],
   bootstrap: [AppComponent]
 })
 export class AppModule {

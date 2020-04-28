@@ -1,0 +1,26 @@
+<div class="container">
+<table class="table">
+  <thead>
+   <tr class="bg-primary">
+     <th>Id-Offre</th>
+     <th>image</th>
+     <th>Domaine</th>
+     <th>Ville</th>
+     <th>Description</th>
+     <th>Date d'Offre</th>
+   </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor=" let o of  offres._embedded.offres">
+      <td>{{o.id_offre}}</td>
+      <td> <img src="{{o.imageUrl}}" height="60"/> </td>
+      <td> {{o.domaine}}</td>
+      <td>{{o.ville}}</td>
+      <td>{{o.description}}</td>
+      <td>{{o.dateOffre}}</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
