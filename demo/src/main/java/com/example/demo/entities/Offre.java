@@ -1,19 +1,18 @@
 package com.example.demo.entities;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
-import javax.validation.constraints.Pattern;
+import java.io.Serializable;
 import java.util.Date;
 
 @Entity
 @Data
 @AllArgsConstructor @NoArgsConstructor
-public class Offre {
+@Getter @Setter
+public class Offre implements Serializable {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_offre;
     private String domaine;
@@ -21,7 +20,7 @@ public class Offre {
     private String description;
     private String ville;
     @Temporal(TemporalType.DATE)
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @DateTimeFormat(pattern = "MM-dd-yyyy")
     private Date dateOffre;
 
 }

@@ -25,10 +25,11 @@ public class DemoApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         repositoryRestConfiguration.exposeIdsFor(Offre.class);
-        offreRepository.save(new Offre(null,"Informatique", "assets/images/1.JPG", "testgvhvjvjvjb", "Tanger", new Date()));
-        offreRepository.save(new Offre(null,"Big Data", "assets/images/2.JPG", "testgvhvjvjvjb", "Fes",new Date()));
+
+
+
         /*
-        offreRepository.save(new Offre(null,"Economie", "assets/image/logo.png", "tesxt2 ", new Date()));
+        offreRepository.save(new Offre(null,"Economie", "assets/images/entr1.jpg", "tesxt2 ", new Date()));
         offreRepository.save(new Offre(null,"Genie Civil", "assets/image/logo.png", "text", new Date()));
         */
     }

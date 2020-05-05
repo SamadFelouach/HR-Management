@@ -1,13 +1,29 @@
-<div class="container">
-<table class="table">
-  <thead>
-   <tr class="bg-primary">
+<app-navbar></app-navbar>
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-header">Liste des offres</div>
+    <div class="card-body">
+
+
+      <form  #f="ngForm" (ngSubmit)="onChercher(f.value)">
+        <div class="form-group ">
+          <label> filtrer par Categorie</label>
+          <input type="text" name="keyword" ngModel>
+          <button type="submit" class="btn btn-primary">chercher</button>
+        </div>
+      </form>
+
+
+<table *ngIf="offres" class="table ">
+  <thead class="thead">
+   <tr >
      <th>Id-Offre</th>
      <th>image</th>
-     <th>Domaine</th>
+     <th>Categorie</th>
      <th>Ville</th>
      <th>Description</th>
      <th>Date d'Offre</th>
+     <button class="btn btn-primary" routerLink="/nvoffre">Ajouter Un offre</button>
    </tr>
   </thead>
   <tbody>
@@ -18,9 +34,19 @@
       <td>{{o.ville}}</td>
       <td>{{o.description}}</td>
       <td>{{o.dateOffre}}</td>
+      <td><a  class=" btn btn-success">Modifer</a></td>
+      <td><a (click)="onDeleteOffre(o)" class="btn btn-danger" >Supprimer</a></td>
     </tr>
   </tbody>
 </table>
-
+      <ul *ngIf="pages" class="nav nav-pills">
+        <li  class="clickeable" *ngFor="let p of pages; let i=index">
+         <button (click)="ongetpageoffre(i)" [ngClass]="i ==curentPage?'active' : ''">{{i}}</button>
+        </li>
+      </ul>
 </div>
 
+  </div>
+  </div>
+
+<router-outlet></router-outlet>

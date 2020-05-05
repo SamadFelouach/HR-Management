@@ -17,6 +17,7 @@ public class OffreController {
 
     @GetMapping(value = "/offres")
     public List<Offre> getoffre() {
+
         return offreRepository.findAll();
     }
 
@@ -26,8 +27,8 @@ public class OffreController {
     }
 
     @PostMapping("/nvoffre")
-    public Offre ajouterOffre(@RequestBody Offre nvoffre) {
 
+    public Offre ajouterOffre(@RequestBody Offre nvoffre) {
         return offreRepository.save(nvoffre);
     }
 

@@ -8,11 +8,15 @@ import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { OffreComponent } from './offre/offre.component';
 import {Offreservice} from './services/offreservice';
+import { NvoffreComponent } from './nvoffre/nvoffre.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OffreComponent,
+    NvoffreComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
