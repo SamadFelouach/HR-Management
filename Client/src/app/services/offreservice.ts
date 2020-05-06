@@ -27,4 +27,12 @@ export class Offreservice {
   public addoffre(offreUrl, data){
     return this.httpClient.post(offreUrl ,data) ;
   }
+
+  public getoffre(url) {
+    return this.httpClient.get(url);
+  }
+
+  updateOffre(url,data) {
+    return this.httpClient.put(url,data)
+  }
 }

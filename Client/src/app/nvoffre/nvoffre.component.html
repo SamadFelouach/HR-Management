@@ -1,15 +1,15 @@
 <app-navbar></app-navbar>
 <div class="container mt-5">
 <div class="col-md-9">
-<div class="panel panel-default">
-  <div class="panel-heading">Nouveau Offre</div>
-  <div class="panel-body">
+<div class="card">
+  <div class="card-header">Nouveau Offre</div>
+  <div class="card-body">
 
           <form #f="ngForm" (ngSubmit)="saveoffre(f.value)">
 
          <div class="form-group">
             <label  class="control-label" >Domaine</label>
-            <select class="form-control"  name="domaine" ngModel>
+            <select class="form-control"  name="domaine" ngModel ng>
             <option>Genie Informatique</option>
             <option>Genie Electrique</option>
              <option>Genie Mecanique </option>

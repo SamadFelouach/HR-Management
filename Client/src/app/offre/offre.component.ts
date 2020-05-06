@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Offreservice} from '../services/offreservice';
 import {Observable} from 'rxjs';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-offre',
@@ -15,7 +16,7 @@ export class OffreComponent implements OnInit {
   public totalPages:number;
   public pages :Array<number>;
   private currentKeyword: String ="";
-  constructor(public offreservice:Offreservice) {
+  constructor(public offreservice:Offreservice , private router :Router) {
   }
   ngOnInit(){
      this.getoffres();
@@ -60,6 +61,12 @@ export class OffreComponent implements OnInit {
           error => {console.log(error)}
           )
 
+  }
+
+  onEditeOfrre(o) {
+    let url=o._links.self.href;
+    //btoa on la donne une chaine d caractere et il encode en base 64
+      this.router.navigateByUrl("/editoffre/"+ btoa(url));
   }
 }
 

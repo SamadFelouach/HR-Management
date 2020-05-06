@@ -34,7 +34,7 @@
       <td>{{o.ville}}</td>
       <td>{{o.description}}</td>
       <td>{{o.dateOffre}}</td>
-      <td><a  class=" btn btn-success">Modifer</a></td>
+      <td><a  class=" btn btn-success"  (click)="onEditeOfrre(o)">Modifer</a></td>
       <td><a (click)="onDeleteOffre(o)" class="btn btn-danger" >Supprimer</a></td>
     </tr>
   </tbody>

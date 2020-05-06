@@ -10,6 +10,7 @@ import { OffreComponent } from './offre/offre.component';
 import {Offreservice} from './services/offreservice';
 import { NvoffreComponent } from './nvoffre/nvoffre.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { OffreEditComponent } from './offre-edit/offre-edit.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     OffreComponent,
     NvoffreComponent,
     NavbarComponent,
+    OffreEditComponent,
   ],
   imports: [
     BrowserModule,

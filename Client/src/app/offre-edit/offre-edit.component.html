@@ -1,0 +1,54 @@
+<app-navbar></app-navbar>
+<div class="container mt-5">
+  <div class="col-md-9">
+    <div class="card">
+      <div class="card-header"> Update Offre</div>
+      <div class="card-body " *ngIf="currentOffre">
+
+        <form #f="ngForm" (ngSubmit)="Onupdateoffre(f.value)">
+
+          <div class="form-group">
+            <label  class="control-label" >Domaine</label>
+            <select class="form-control"  name="domaine" [(ngModel)]="currentOffre.domaine" >
+              <option>Genie Informatique</option>
+              <option>Genie Electrique</option>
+              <option>Genie Mecanique </option>
+              <option>Economie</option>
+              <option>Medcine</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Logo d'entreprise</label>
+            <input type="url"  class="form-control" name="imageUrl" [(ngModel)]="currentOffre.imageUrl" >
+          </div>
+
+
+          <div class="form-group">
+            <label >Description</label>
+            <textarea class="form-control"  rows="6" name="description" ngModel [(ngModel)]="currentOffre.description"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label  class="control-label" >Ville</label>
+            <select class="form-control"  name="ville" ngModel  [(ngModel)]="currentOffre.ville">
+              <option>Casablanca</option>
+              <option>Rabat</option>
+              <option>Fes</option>
+              <option>Tanger</option>
+              <option>Marakech</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Date d'offre</label>
+            <input type="date"  class="form-control" name="dateOffre" ngModel  [(ngModel)]="currentOffre.dateOffre">
+          </div>
+          <button class="btn btn-success" type="submit" >Valider</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
