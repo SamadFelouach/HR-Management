@@ -11,6 +11,9 @@ export class Offreservice {
   constructor(private httpClient : HttpClient) {
   }
 
+  getOffresAcceuil(){
+    return this.httpClient.get(this.offreUrl +"/offres");
+  }
   getOffres(page:number, size:number) {
       return this.httpClient.get(this.offreUrl + "/offres?page="+page+"&size="+size);
   }

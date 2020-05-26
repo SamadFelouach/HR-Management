@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand -->
-  <a class="navbar-brand" href="#">Acceuil</a>
+  <a class="navbar-brand" routerLink="/listeoffres">MonCv.ma</a>
 
   <!-- Links -->
   <ul class="navbar-nav">
@@ -8,20 +8,20 @@
       <a class="nav-link" href="#">Link1</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link"  >Link2</a>
+      <a class="nav-link"  routerLink="/listeoffres">Link2</a>
     </li>
-
     <!-- Dropdown -->
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#"  data-toggle="dropdown">
-        Gestion des condidats
+      <a class="nav-link dropdown-toggle" routerLink="/offres" data-toggle="dropdown" >
+        Gestion des offres
       </a>
       <div class="dropdown-menu">
         <a class="dropdown-item" > Ajouter</a>
         <a class="dropdown-item" href="#">Chercher</a>
-
       </div>
     </li>
+
+
   </ul>
   <ul class="navbar-nav  ml-auto">
     <li class="nav-item dropdown">
@@ -29,11 +29,13 @@
         [Username]
       </a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Login</a>
+        <a class="dropdown-item" routerLink="/login">Login</a>
         <a class="dropdown-item" href="#">LogOut</a>
         <a class="dropdown-item" href="#">Profil</a>
 
       </div>
     </li>
   </ul>
+
 </nav>
+<router-outlet></router-outlet>

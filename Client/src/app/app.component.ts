@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {Offreservice} from './services/offreservice';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -8,13 +10,12 @@ import {Component, OnInit} from '@angular/core';
 })
 export class AppComponent implements  OnInit{
   title = 'PrtieClient';
-  constructor() {
+  constructor(private router:Router) {
   }
 
   ngOnInit(): void {
-
-
   }
+
 
 
 }

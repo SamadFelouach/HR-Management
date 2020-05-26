@@ -25,7 +25,9 @@ export class OffreEditComponent implements OnInit {
 
   Onupdateoffre(value: any) {
   this.offreservice.updateOffre(this.url ,value).subscribe(
-    data=>{alert("Mise a jour avec succes")},
+    data=>{alert("Mise a jour avec succes");
+
+     this.router.navigateByUrl("/offres")},
     error => {console.log(error);}
 
   )

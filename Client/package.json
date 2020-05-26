@@ -15,17 +15,19 @@
     "@angular/common": "~9.1.0",
     "@angular/compiler": "~9.1.0",
     "@angular/core": "~9.1.0",
+    "@angular/fire": "^6.0.0",
     "@angular/forms": "~9.1.0",
     "@angular/platform-browser": "~9.1.0",
     "@angular/platform-browser-dynamic": "~9.1.0",
     "@angular/router": "~9.1.0",
-    "rxjs": "~6.5.4",
-    "tslib": "^1.10.0",
-    "zone.js": "~0.10.2",
     "bootstrap": "^4.0.0-beta",
+    "firebase": "^7.14.5",
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
-    "popper.js": "^1.12.5"
+    "popper.js": "^1.12.5",
+    "rxjs": "~6.5.4",
+    "tslib": "^1.10.0",
+    "zone.js": "~0.10.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.0",

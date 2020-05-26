@@ -1,22 +1,19 @@
 <!--
-<div *ngFor=" let o of  offres._embedded.offres"  class="container mt-5">
-  <div class="card-deck">
-    <div class="col mb-4">
-        <div class="card" style="width: 15rem;">
-                <img src="{{o.imageUrl}}" class="card-img-top" alt="">
-                <div class="card-body">
-                   <h5 class="card-title">{{o.domaine}}</h5>
-                   <p class="card-text">{{o.description}}</p>
-                   <p class="card-text"><small class="text-muted">Last updated : {{o.dateOffre}}</small></p>
-                  <a href="#" class="btn btn-success mr-lg-4">Postuler</a>
-                 </div>
-       </div>
-    </div>
-  </div>
+<app-navbar></app-navbar>
+<div class="col-md-2">
+<app-listoffres></app-listoffres>
 </div>
-
+<div class="col-md-10">
+</div>
 -->
-<div>
-  <router-outlet></router-outlet>
 
+
+<router-outlet></router-outlet>
+<div class="card-footer">
+  <td>
+    <th><a class="nav-link"  routerLink="/listeoffres">Contactez nous</a></th>
+    <th><a class="nav-link"  routerLink="/listeoffres">Privacy Policy</a></th>
+    <th><a class="nav-link"  routerLink="/listeoffres">Contactez nous</a></th>
+
+  <td>
 </div>
