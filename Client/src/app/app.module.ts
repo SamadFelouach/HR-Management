@@ -22,6 +22,7 @@ import { ListoffresComponent } from './Acceuil/listoffres/listoffres.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AuthenticationComponent } from './pages/authentication/authentication.component';
 import { DashboardComponent } from './Dashboard/dashboard/dashboard.component';
+import { CvComponent } from './cv/cv.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { DashboardComponent } from './Dashboard/dashboard/dashboard.component';
     LoginComponent,
     AuthenticationComponent,
     DashboardComponent,
+    CvComponent,
   ],
   imports: [
     AngularFireDatabaseModule,

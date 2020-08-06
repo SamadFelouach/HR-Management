@@ -23,6 +23,7 @@
      <th>Ville</th>
      <th>Description</th>
      <th>Date d'Offre</th>
+     <th>Secteur</th>
      <button class="btn btn-primary" routerLink="/nvoffre">Ajouter Un offre</button>
    </tr>
   </thead>
@@ -34,6 +35,8 @@
       <td>{{o.ville}}</td>
       <td>{{o.description}}</td>
       <td>{{o.dateOffre}}</td>
+
+      <td>{{o.cat}}</td>
       <td><a  class=" btn btn-success"  (click)="onEditeOfrre(o)">Modifer</a></td>
       <td><a (click)="onDeleteOffre(o)" class="btn btn-danger" >Supprimer</a></td>
     </tr>

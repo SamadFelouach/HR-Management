@@ -7,6 +7,7 @@ import {ListoffresComponent} from './Acceuil/listoffres/listoffres.component';
 import {LoginComponent} from './pages/login/login.component';
 import {AuthenticationComponent} from './pages/authentication/authentication.component';
 import {DashboardComponent} from './Dashboard/dashboard/dashboard.component';
+import {CvComponent} from './cv/cv.component';
 
 
 
@@ -18,7 +19,7 @@ const routes: Routes = [
   {path : "listeoffres" , component:ListoffresComponent },
   {path : "nvoffre" , component: NvoffreComponent},
   {path : "editoffre/:id" , component: OffreEditComponent},
-
+  {path : "cv", component:CvComponent},
 
   { path: '', redirectTo: '/listeoffres', pathMatch: 'full' }
 ];

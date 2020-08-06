@@ -19,6 +19,10 @@ public class Offre implements Serializable {
     private String imageUrl;
     private String description;
     private String ville;
+
+    @ManyToOne
+    private Secteur secteur;
+
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "MM-dd-yyyy")
     private Date dateOffre;

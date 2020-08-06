@@ -23,12 +23,15 @@ public class OffreController {
 
     @GetMapping(value = "/offres/{id_offre}")
     public Offre getoffre(@PathVariable(name = "id") Long id_offre) {
+
         return offreRepository.findById(id_offre).get();
     }
 
     @PostMapping("/nvoffre")
 
-    public Offre ajouterOffre(@RequestBody Offre nvoffre) {
+    public Offre ajouterOffre(@RequestBody Offre nvoffre)
+    {
+
         return offreRepository.save(nvoffre);
     }
 
