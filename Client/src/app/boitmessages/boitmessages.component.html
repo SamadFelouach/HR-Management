@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-header">Notifications </div>
+    <div class="card-body">
+
+      <table *ngIf="messages" class="table ">
+        <thead class="thead">
+        <tr >
+          <th>Id</th>
+          <th>Nom</th>
+          <th>Prenom</th>
+          <th>Email</th>
+          <th>Message</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor=" let o of  messages._embedded.messages">
+          <td>{{o.id_message}}</td>
+          <td>{{o.name}}</td>
+          <td>{{o.prenom}}</td>
+          <td> {{o.email}}</td>
+          <td>{{o.message}}</td>
+          <button class="btn btn-danger" routerLink="/nvoffre">Supprimer</button>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -23,6 +23,9 @@ import { LoginComponent } from './pages/login/login.component';
 import { AuthenticationComponent } from './pages/authentication/authentication.component';
 import { DashboardComponent } from './Dashboard/dashboard/dashboard.component';
 import { CvComponent } from './cv/cv.component';
+import { MessageComponent } from './message/message.component';
+import { BoitmessagesComponent } from './boitmessages/boitmessages.component';
+import { CondidatureComponent } from './condidature/condidature.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,9 @@ import { CvComponent } from './cv/cv.component';
     AuthenticationComponent,
     DashboardComponent,
     CvComponent,
+    MessageComponent,
+    BoitmessagesComponent,
+    CondidatureComponent,
   ],
   imports: [
     AngularFireDatabaseModule,

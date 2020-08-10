@@ -8,6 +8,8 @@ import {LoginComponent} from './pages/login/login.component';
 import {AuthenticationComponent} from './pages/authentication/authentication.component';
 import {DashboardComponent} from './Dashboard/dashboard/dashboard.component';
 import {CvComponent} from './cv/cv.component';
+import {MessageComponent} from './message/message.component';
+import {BoitmessagesComponent} from './boitmessages/boitmessages.component';
 
 
 
@@ -20,6 +22,8 @@ const routes: Routes = [
   {path : "nvoffre" , component: NvoffreComponent},
   {path : "editoffre/:id" , component: OffreEditComponent},
   {path : "cv", component:CvComponent},
+  {path : "contact", component: MessageComponent},
+  {path :"inbox" , component: BoitmessagesComponent},
 
   { path: '', redirectTo: '/listeoffres', pathMatch: 'full' }
 ];

@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+<h1 class="container col-md-5 p-4 border-1">Contacter Nous</h1>
+<div class="container align-content-center ">
+  <div class="col-md-9">
+
+    <div class="card">
+      <div class="card-header col-md">Informations personnels</div>
+      <div class="card-body">
+
+        <form #f="ngForm" (ngSubmit)="savemessage(f.value)">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label >Nom</label>
+              <input type="text" class="form-control" name="name" placeholder="Nom" ngModel>
+            </div>
+            <div class="form-group col-md-6">
+              <label >Prénom</label>
+              <input type="text" class="form-control" name="prenom" placeholder="Prénom" ngModel>
+            </div>
+          </div>
+           <div class="form-group">
+              <label >Email</label>
+              <input type="email" class="form-control" name="email"  placeholder="Email" ngModel>
+            </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea   class="form-control" name="message" placeholder="message" ngModel></textarea>
+          </div>
+
+          <button class="btn btn-success" type="submit" >Envoyer le message</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

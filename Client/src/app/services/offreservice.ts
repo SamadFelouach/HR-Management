@@ -11,6 +11,14 @@ export class Offreservice {
   constructor(private httpClient : HttpClient) {
   }
 
+  public newMessage(offreUrl,data){
+    return this.httpClient.post(offreUrl,data);
+  }
+
+  public getmessages(offreUrl){
+    return this.httpClient.get(offreUrl);
+  }
+
   getOffresAcceuil(){
     return this.httpClient.get(this.offreUrl +"/offres");
   }
@@ -38,4 +46,7 @@ export class Offreservice {
   updateOffre(url,data) {
     return this.httpClient.put(url,data)
   }
+
+
+
 }

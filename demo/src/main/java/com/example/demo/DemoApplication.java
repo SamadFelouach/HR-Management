@@ -1,6 +1,8 @@
 package com.example.demo;
 
+import com.example.demo.dao.MessageRepository;
 import com.example.demo.dao.OffreRepository;
+import com.example.demo.entities.Message;
 import com.example.demo.entities.Offre;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -13,8 +15,11 @@ import java.util.Date;
 @SpringBootApplication
 public class DemoApplication implements CommandLineRunner {
 
+
     @Autowired
     private OffreRepository offreRepository;
+    @Autowired
+    private MessageRepository messageRepository;
     @Autowired
     private RepositoryRestConfiguration repositoryRestConfiguration;
     public static void main(String[] args) {
@@ -25,6 +30,7 @@ public class DemoApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         repositoryRestConfiguration.exposeIdsFor(Offre.class);
+        repositoryRestConfiguration.exposeIdsFor(Message.class);
         /*
         offreRepository.save(new Offre(null,"Economie", "assets/images/entr1.jpg", "tesxt2 ", new Date()));
         offreRepository.save(new Offre(null,"Genie Civil", "assets/image/logo.png", "text", new Date()));

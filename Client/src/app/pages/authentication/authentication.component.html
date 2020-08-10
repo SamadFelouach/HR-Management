@@ -1,23 +1,40 @@
+<app-navbar></app-navbar>
 
 <div class="container">
-  <div class="row justify-content-center p-4">
+  <h1 class=" mt-2">Création votre compte</h1>
+    <button class="btn btn-success "> Entreprise </button>
+    <button class="btn btn-warning "> Condidats </button>
+<div class=" row ">
+  <div class="col-md-6 mt-3">
 
-
-    <div class="col-md-6">
+    <div class="card">
+      <div class="card-header col-md">Création votre compte</div>
+      <div class="card-body">
       <form (ngSubmit)="register()">
-        <h3>Firebase Register</h3>
-        <div class="form-group p-2">
-          <input type="email" name="email" class="form-control" [(ngModel)]="email" placeholder="Enter email Id" required>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label >Nom</label>
+            <input type="text" class="form-control"  placeholder="Nom">
+          </div>
+          <div class="form-group col-md-6">
+            <label >Prénom</label>
+            <input type="text" class="form-control"  placeholder="Prénom">
+          </div>
         </div>
-        <div class="form-group p-2">
+        <div class="form-group ">
+          <input type="email" name="email" class="form-control" [(ngModel)]="email" placeholder="Email" required>
+        </div>
+        <div class="form-group ">
           <input type="password" name="password" class="form-control" [(ngModel)]="password" placeholder="Enter Password"
                  required>
         </div>
-        <div class="form-group p-2">
-          <button type="submit" class="btn btn-primary">Register</button>
-          <div class="register"><a href="#" routerLink="/login">Back To Login</a></div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success">Valider mes informations </button>
+          <div class="register"><a href="#" routerLink="/login">Vous avez déja un compte ?</a></div>
         </div>
       </form>
+      </div>
       <div class="form-group">
         <p *ngIf="errorMessage.length > 0" class="text-danger">
           {{errorMessage}}</p>
@@ -29,6 +46,8 @@
           {{message}} </p>
       </div>
     </div>
+  </div>
 
   </div>
 </div>
+
